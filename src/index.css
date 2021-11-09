@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+.form-design{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+input[type="text"]{
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+    border: 2px solid rgb(80, 74, 74);
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+
+textarea{
+    margin: 10px;
+    border: 2px solid rgb(80, 74, 74);
+    width: 300px;
+    border-radius: 3px;
+    padding: 5px 5px;
+
+
+}
+
+input[type="date"] {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgb(80, 74, 74);
+
+    border-radius: 3px;
+
+  }
+h4{
+    margin: 5px 10px 5px 10px;
+}
+
+.radio-btn{
+    margin: 10px;
+}
+
+button[type="submit"]{
+    background-color: rgb(89, 105, 253);
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px 30px 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: large;
+    color: white;
+    font-weight:400;
+}
+
+.add-btn{
+  background-color: rgb(89, 105, 253);
+    border: none;
+    cursor: pointer;
+    margin: 50px 10px 5px 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: large;
+    color: white;
+    font-weight:400;
+}
+.container {
+  background-color: gainsboro;
+  height: auto;
+  width: 500px;
+  background-color: #f6fbfe;
+  border-radius: 20px;
+  margin-top: 100px;
+  padding: 40px 10px 10px 10px;
+  position: relative;
+}
+
+.toDoIcon{
+    position: absolute;
+    top: -70px;
+    left: 190px;
+    height: 100px;
+    width: 200px;
+
+}
+
+.list-view {
+  margin: 20px auto 20px auto;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 180px;
+  position: relative;
+  
+}
+
+.center-col {
+  margin: 10px 10px 10px 35px;
+  width: 250px;
+}
+h2 {
+  color: #4b6a79;
+  margin: 5px;
+}
+
+p{
+  margin: 5px;
+}
+
+.content {
+  color: gray;
+}
+.right-col {
+  margin: 10px;
+}
+.left-col {
+  margin: 10px;
+  position: absolute;
+  background-color: #c6e2f7;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  left: -35px;
+  top: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.checkButton {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.delButton {
+  height: 20px;
+  margin-top: 60px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delButton:hover {
+  height: 25px;
+}
+
+.left-col2 {
+  margin: 10px;
+  position: absolute;
+  background-color:rgb(97, 224, 97);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  left: -35px;
+  top: 30px;
+  align-items: center;
+  text-align: center;
+}
+
