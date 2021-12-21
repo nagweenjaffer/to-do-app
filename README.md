@@ -1,8 +1,9 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple To Do App using React.js Framework .
 
 ## Available Scripts
+To install the node_modules first run :
+### `yarn`
+
 
 In the project directory, you can run:
 
