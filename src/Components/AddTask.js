@@ -20,6 +20,7 @@ const AddTask = (props) => {
   };
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    console.log(formValues);
   };
   return (
     <div>
@@ -57,20 +58,17 @@ const AddTask = (props) => {
           <input
             type="radio"
             name="completed"
-            id=""
             onChange={handleChange}
             value="true"
-          />
+                     />
           <label>Yes</label>
           <br />
           <input
             type="radio"
             name="completed"
-            id=""
             onChange={handleChange}
             value="false"
-            defaultChecked
-          />
+                     />
           <label>No</label>
         </div>
 

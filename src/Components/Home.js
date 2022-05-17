@@ -4,30 +4,6 @@ import "../index.css";
 import TaskList from "./TaskList";
 import list from "../assets/list.png";
 
-// const inistList = [
-//   {
-//     id: 1,
-//     title: "grocery",
-//     content: "buy bananas and apples",
-//     date: "2021-02-02",
-//     isCompleted: "true",
-//   },
-//   {
-//     id: 2,
-//     title: "grocery",
-//     content: "buy bananas and apples",
-//     date: "2021-02-02",
-//     isCompleted: "false",
-//   },
-//   {
-//     id: 3,
-//     title: "shopping",
-//     content: "blah blah",
-//     date: "2021-02-02",
-//     isCompleted: "true",
-//   },
-// ];
-
 const Home = () => {
   const [tasks, setTasks] = useState(null);
   const [formValues, setFormValues] = useState({
@@ -42,7 +18,8 @@ const Home = () => {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((res) => res.json())
       .then((data) => {
-        setTasks(data);
+        //to take only the first 10 records
+        setTasks(data.slice(0,10));
         setIsPending(false);
       })
       .catch((e) => console.log(e));
@@ -55,7 +32,6 @@ const Home = () => {
   const newtodo = (task) => {
     const newData = [task, ...tasks];
     setTasks(newData);
-    console.log(tasks);
     setShowForm(!showForm);
     setShowAddButton(!showAddButton);
     setFormValues({
@@ -74,9 +50,9 @@ const Home = () => {
   return (
     <div className="container">
       <div className="toDoIcon">
-        <img src={list} alt="" />
+        <img src={list} alt="list-img" />
       </div>
-      {showAddButton ? (
+      {showAddButton &&
         <div>
           <button
             className="add-btn"
@@ -85,19 +61,17 @@ const Home = () => {
               setShowAddButton(!showAddButton);
             }}
           >
-            {" "}
             + Add New Task
           </button>
         </div>
-      ) : null}
-
-      {showForm ? (
+      }
+      {showForm &&
         <AddTask
           newtodo={newtodo}
           formValues={formValues}
           setFormValues={setFormValues}
         />
-      ) : null}
+      }
       {isPending && <h2>Loading...</h2>}
       {tasks && (
         <TaskList
